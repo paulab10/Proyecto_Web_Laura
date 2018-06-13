@@ -1,0 +1,113 @@
+<div class="modal" *ngIf="isProcessing">
+  <div class="modal-content">
+    <span>Detail View is being processed</span>
+  </div>
+</div>
+
+<div class="container">
+  <div class="cards-container">
+    <div class="row-container">
+      <input type="file" id="input-excel-1" (change)="selectFile($event, 'fscr')"
+             accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+      <label for="input-excel-1">
+        <div class="card-1">
+          <!-- Card View -->
+          <div class="content-card">
+            <div class="icon">
+              <img class="image-card" src="{{excelImg.fscr}}">
+            </div>
+            <div class="title">
+              <h2>FSCR</h2>
+            </div>
+          </div>
+
+        </div>
+      </label><!-- No spaces
+  ---><input type="file" id="input-excel-2" (change)="selectFile($event, 'conectar')"
+             accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"><!-- No spaces
+  ---><label for="input-excel-2">
+      <div class="card-2">
+        <!-- Card View -->
+        <div class="content-card">
+          <div class="icon">
+            <img class="image-card" src="{{excelImg.conectar}}">
+          </div>
+          <div class="title">
+            <h2>CONECTAR</h2>
+          </div>
+        </div>
+      </div>
+    </label><!-- No spaces
+  ---><input type="file" id="input-excel-3" (change)="selectFile($event, 'enecon')"
+             accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"><!-- No spaces
+  ---><label for="input-excel-3">
+      <!-- Card View -->
+      <div class="card-2">
+        <div class="content-card">
+          <div class="icon">
+            <img class="image-card" src="{{excelImg.enecon}}">
+          </div>
+          <div class="title">
+            <h2>ENECON</h2>
+          </div>
+        </div>
+      </div>
+    </label>
+    </div>
+    <!-- Row 2 -->
+    <div class="row-container">
+      <input type="file" id="input-excel-4" (change)="selectFile($event, 'sicte')"
+             accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+      <label for="input-excel-4">
+        <div class="card-1">
+          <!-- Card View -->
+          <div class="content-card">
+            <div class="icon">
+              <img class="image-card" src="{{excelImg.sicte}}">
+            </div>
+            <div class="title">
+              <h2>SICTE</h2>
+            </div>
+          </div>
+
+        </div>
+      </label><!-- No spaces
+  ---><input type="file" id="input-excel-5" (change)="selectFile($event, 'dico')"
+             accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"><!-- No spaces
+  ---><label for="input-excel-5">
+      <div class="card-2">
+        <!-- Card View -->
+        <div class="content-card">
+          <div class="icon">
+            <img class="image-card" src="{{excelImg.dico}}">
+          </div>
+          <div class="title">
+            <h2>DICO</h2>
+          </div>
+        </div>
+      </div>
+    </label><!-- No spaces
+  ---><input type="file" id="input-excel-6" (change)="selectFile($event, 'applus')"
+             accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"><!-- No spaces
+  ---><label for="input-excel-6">
+      <!-- Card View -->
+      <div class="card-2">
+        <div class="content-card">
+          <div class="icon">
+            <img class="image-card" src="{{excelImg.applus}}">
+          </div>
+          <div class="title">
+            <h2>APPLUS</h2>
+          </div>
+        </div>
+      </div>
+    </label>
+    </div>
+
+    <div class="row-container">
+      <div>
+        <a class="button" (click)="updateDetailView()">DETAILS</a>
+      </div>
+    </div>
+  </div>
+</div>

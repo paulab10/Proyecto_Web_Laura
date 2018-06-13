@@ -1,0 +1,49 @@
+<div class="modal" *ngIf="isProcessing">
+  <div class="modal-content">
+    <span>Detail View is being processed</span>
+  </div>
+</div>
+
+<div class="container">
+  <div class="cards-container">
+    <div class="row-container">
+      <input type="file" id="input-excel-1" (change)="selectFile($event, 'detailview')"
+             accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+      <label for="input-excel-1">
+        <div class="card-1">
+          <!-- Card View -->
+          <div class="content-card">
+            <div class="icon">
+              <img class="image-card" src="{{excelImg.detailview}}">
+            </div>
+            <div class="title">
+              <h2>DETAIL VIEW</h2>
+            </div>
+          </div>
+
+        </div>
+      </label><!-- No spaces
+  ---><input type="file" id="input-excel-2" (change)="selectFile($event, 'isdp')"
+             accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"><!-- No spaces
+  ---><label for="input-excel-2">
+        <div class="card-2">
+          <!-- Card View -->
+          <div class="content-card">
+            <div class="icon">
+              <img class="image-card" src="{{excelImg.isdp}}">
+            </div>
+            <div class="title">
+              <h2>ISDP</h2>
+            </div>
+          </div>
+        </div>
+      </label><!-- No spaces-->
+    </div>
+
+    <div class="row-container">
+      <div>
+        <a class="button" (click)="updateDetailView()">DETAILS</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,99 @@
+.container {
+  margin: 0;
+  padding: 32px;
+  background: white;
+}
+
+.cards-container {
+  padding: 56px 68px;
+  background: lightgray;
+  border-radius: 10px;
+}
+
+.content-card {
+  background: white;
+  padding: 48px 16px;
+  border-radius: 5px;
+}
+
+.row-container {
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.row-container:last-of-type {
+  margin-bottom: 0;
+}
+
+[class*='card-'] {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 5px;
+  box-shadow: 2px 2px 8px 2px rgba(255, 0, 0, 0.5);
+  transition: all 0.5s ease-in-out;
+}
+
+[class*='card-']:hover {
+  top: -10px;
+
+}
+
+[class*='card-']:last-of-type {
+  margin-right: 0;
+}
+
+.single-card {
+  width: 100%;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 2px 2px 8px 2px rgba(255, 0, 0, 0.5);
+  transition: all 0.5s ease-in-out;
+}
+
+.single-card:hover {
+  top: -10px;
+}
+
+.image-card {
+  width: 60px;
+  height: 60px;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  padding: 16px 0;
+}
+
+input[type=file] {
+  position: absolute;
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+input[type=file] + label {
+  cursor: pointer;
+  width: 47%;
+  display: inline-block;
+  margin-right: 3%;
+}
+
+input[type=file] + label:last-of-type {
+  margin-right: 0;
+  margin-left: 3%;
+}
+
+#label-single {
+  width: 70%;
+  display: block;
+  position: relative;
+  margin: 0 auto;
+}
+
+

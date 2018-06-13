@@ -1,0 +1,98 @@
+<section class="container">
+
+  <h2 class="title">Comparativo portafolios PO</h2>
+
+  <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vehicula fringilla tellus,
+    sed elementum lorem lacinia vel. Quisque nibh lacus, iaculis in sapien vel, pharetra tempus lorem. Aliquam semper
+    volutpat nisl. Integer vel ligula sodales,
+
+    ultrices felis vitae, imperdiet diam. Donec pulvinar elementum turpis, quis cursus nunc rutrum id. Proin ac sem id
+    mauris malesuada scelerisque vitae nec felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+    per inceptos
+
+    himenaeos. Nunc id tellus tortor.
+
+
+    <a class="link-compare" href="">Comparar nuevamente</a>
+
+  </div>
+
+  <div class="info-container">
+
+    <ul class="nav">
+      <li class="nav-item" [class.active]="tabActive.sicte" (click)="onTabClicked('sicte')">
+        <div class="nav-link"><span>1</span> SICTE</div>
+        <div class="nav-link-mb active" href="#">1</div>
+      </li>
+
+      <li class="nav-item" [class.active]="tabActive.dico" (click)="onTabClicked('dico')">
+        <div class="nav-link"><span>2</span> DICO</div>
+        <div class="nav-link-mb" href="#">2</div>
+      </li>
+
+      <li class="nav-item" [class.active]="tabActive.fscr" (click)="onTabClicked('fscr')">
+        <div class="nav-link"><span>3</span> FSCR</div>
+        <div class="nav-link-mb" href="#">3</div>
+      </li>
+
+      <li class="nav-item" [class.active]="tabActive.applus" (click)="onTabClicked('applus')">
+        <div class="nav-link"><span>4</span> APPLUS</div>
+        <div class="nav-link-mb" href="#">4</div>
+      </li>
+
+      <li class="nav-item" [class.active]="tabActive.conectar" (click)="onTabClicked('conectar')">
+        <div class="nav-link"><span>5</span> CONECTAR</div>
+        <div class="nav-link-mb" href="#">5</div>
+      </li>
+
+      <li class="nav-item" [class.active]="tabActive.enecon" (click)="onTabClicked('enecon')">
+        <div class="nav-link"><span>6</span> ENECON</div>
+        <div class="nav-link-mb" href="#">6</div>
+      </li>
+
+    </ul>
+
+    <div class="sub-container">
+
+      <div class="tables-container">
+        <!-- Available Table -->
+        <div class="single-table-container" id="table_available" *ngIf="true">
+          <table cellspacing="0">
+            <thead>
+              <tr class="row100 head">
+                <th colspan="2">PO Number</th>
+                <th>DU NUMBER</th>
+                <th class="cell-center">Start Date</th>
+                <th colspan="2" class="cell-center">Description</th>
+                <th class="cell-center">PR Line Quantity</th>
+                <th class="cell-center">Billed Per</th>
+
+              </tr>
+            </thead>
+
+            <tbody>
+
+            <tr *ngFor="let product of products">
+              <td colspan="2">{{product.poNumber}}</td>
+              <td>{{product.duNumber}}</td>
+              <td class="cell-center">{{product.actualDate}}</td>
+              <td colspan="2" class="cell-center">{{product.description}}</td>
+              <td class="cell-center">{{product.quantityDV}}</td>
+              <td class="cell-center">{{product.billedPercent}}</td>
+            </tr>
+            <!--
+            <tr>
+              <td colspan="2">197978978-19</td>
+              <td>366987</td>
+              <td class="cell-center">407</td>
+              <td colspan="2" class="cell-center">This is a long description to test this column width</td>
+              <td class="cell-center">10</td>
+              <td class="cell-center">12</td>
+            </tr>-->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

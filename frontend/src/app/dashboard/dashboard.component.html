@@ -1,0 +1,42 @@
+<div class="modal" *ngIf="isProcessing">
+  <div class="modal-content">
+    <span>Detail View is being processed</span>
+  </div>
+</div>
+
+<div class="container">
+  <section class="selector_container">
+    <div class="col-1-4">
+      <div class="col-content" (click)="goToLoadFiles()">
+        <div class="icon">
+          <img src="../../assets/icon_upload.png" width="80" height="80">
+        </div>
+        <div class="title">
+          <h2>LOAD FILES</h2>
+        </div>
+      </div>
+    </div><!-- No spaces
+---><div class="col-5-8">
+      <div class="col-content" (click)="updateDetailView()">
+        <div class="icon">
+          <img src="{{iconsImg.detailview}}" width="80" height="80">
+        </div>
+        <div class="title">
+          <h2>SUPPLIERS</h2>
+        </div>
+      </div>
+    </div><!-- No spaces
+---><div class="col-9-12">
+      <div class="col-content" (click)="goToDetailsNoPo()">
+        <div class="icon">
+          <img src="{{iconsImg.isdp}}" width="80" height="80">
+        </div>
+        <div class="title">
+          <h2>NO PO - NO WORK</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+

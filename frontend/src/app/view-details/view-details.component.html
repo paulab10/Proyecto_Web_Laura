@@ -1,0 +1,41 @@
+<div class="select-btns-container align-center">
+  <a class="button" [class.btn-active]="supplierActive" routerLink="/info-details">SUPPLIERS DETAILS</a>
+  <a class="button" [class.btn-active]="citiesActive" >CITIES DETAILS</a>
+</div>
+
+<div class="tables-container">
+  <!-- Available Table -->
+  <div class="single-table-container" id="table_available" *ngIf="true">
+    <table cellspacing="0">
+      <thead>
+      <tr class="row100 head">
+        <th colspan="2">DU Number</th>
+        <th class="cell-center">Start Date ISDP</th>
+        <th class="cell-center">Start Date DV</th>
+        <th class="cell-center">Region</th>
+      </tr>
+      </thead>
+
+      <tbody>
+
+      <tr *ngFor="let product of products">
+        <td colspan="2">{{product.poNumber}}</td>
+        <td>{{product.duNumber}}</td>
+        <td class="cell-center">{{product.actualDate}}</td>
+        <td colspan="2" class="cell-center">{{product.description}}</td>
+        <td class="cell-center">{{product.quantityDV}}</td>
+        <td class="cell-center">{{product.billedPercent}}</td>
+      </tr>
+      <!--
+      <tr>
+        <td colspan="2">197978978-19</td>
+        <td>366987</td>
+        <td class="cell-center">407</td>
+        <td colspan="2" class="cell-center">This is a long description to test this column width</td>
+        <td class="cell-center">10</td>
+        <td class="cell-center">12</td>
+      </tr>-->
+      </tbody>
+    </table>
+  </div>
+</div>
